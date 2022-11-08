@@ -1,21 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entity;
 
-/**
- *
- * @author Anatoli
- */
+
 public class Customer {
     private String firstname;
     private String lastname;
-    private int phone;
-    private int personalmoney;
+    private int cash;
+
+    public int getCash() {
+        return cash;
+    }
+
+    public void setCash(int cash) {
+        this.cash = cash;
+    }
 
     public Customer() {
+    }
+
+    public Customer(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     public String getFirstname() {
@@ -34,27 +39,12 @@ public class Customer {
         this.lastname = lastname;
     }
 
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
-    public int getPersonalmoney() {
-        return personalmoney;
-    }
-
-    public void setPersonalmoney(int personalmoney) {
-        this.personalmoney = personalmoney;
-    }
-
     @Override
     public String toString() {
-        return "Customer{" + "firstname=" + firstname + ", lastname=" + lastname + ", phone=" + phone + ", personalmoney=" + personalmoney + '}';
+        return "Customer{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", cash=" + cash +
+                '}';
     }
-
-    
-    
 }

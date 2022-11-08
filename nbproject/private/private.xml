@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21ShoesIvanov/src/entity/History.java</file>
-            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21ShoesIvanov/src/entity/Money.java</file>
-            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21ShoesIvanov/src/entity/Product.java</file>
-            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21ShoesIvanov/src/sptv21shopivanov/App.java</file>
-            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21ShoesIvanov/src/entity/Customer.java</file>
-            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21ShoesIvanov/src/sptv21shopivanov/SPTV21ShopIvanov.java</file>
+            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21/SPTV21ShopIvanov/src/manager/ProductManager.java</file>
+            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21/SPTV21ShopIvanov/src/sptv21shopivanov/App.java</file>
+            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21/SPTV21ShopIvanov/src/entity/Product.java</file>
+            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21/SPTV21ShopIvanov/src/manager/CustomerManager.java</file>
+            <file>file:/C:/Users/Anatoli/Documents/NetBeansProjects/SPTV21/SPTV21ShopIvanov/src/entity/Customer.java</file>
         </group>
     </open-files>
 </project-private>
