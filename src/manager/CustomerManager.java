@@ -13,13 +13,15 @@ public class CustomerManager{
         customer.setFirstname(scanner.nextLine());
         System.out.print("Введите фамилию покупателя: ");
         customer.setLastname(scanner.nextLine());
+        System.out.print("Введите баланс покупателя: ");
+        customer.setCash(scanner.nextInt());
         return customer;
     }
 
     public void printListCustomers(Customer[] customers) {
         for (int i = 0; i < customers.length; i++) {
             Customer customer = customers[i];
-            System.out.println(i+1+". "+customer.getFirstname()+" "+customer.getLastname()+" Cash:"+customer.getCash());
+            System.out.println(i+1+". "+customer.getFirstname()+" "+customer.getLastname()+" Cash:"+customer.getCash()+"€");
         }
     }
 }
