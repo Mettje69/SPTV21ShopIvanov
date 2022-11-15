@@ -9,7 +9,7 @@ public class ProductManager {
     private Scanner scanner;
 
     public ProductManager() {
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
     public Product addProduct() {
@@ -17,10 +17,9 @@ public class ProductManager {
         System.out.println("Введите название продукта: ");
         product.setProductName(scanner.nextLine());
         System.out.println("Введите цену продукта: ");
-        product.setPrice(scanner.nextInt());scanner.nextLine();
-        System.out.println("Введите количество товара: ");
         product.setPrice(scanner.nextInt());
-        scanner.nextLine();
+        System.out.println("Введите количество товара: ");
+        product.setQuantity(scanner.nextInt());
         return product;
     }
 

@@ -3,27 +3,31 @@
 package sptv21shopivanov;
 
 import entity.Customer;
+import entity.History;
 import entity.Product;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 import manager.CustomerManager;
 import manager.ProductManager;
+import manager.HistoryManager;
 
 
 public class App {
     private Product[] products;
     private Customer[] customers;
+    private History[] histories;
     private final CustomerManager customerManager;
     private final ProductManager productManager;
-    int history[];
+    private final HistoryManager historyManager;
 
     public App() {
-        this.products = new Product[0];
-        this.customers = new Customer[0];
+        products = new Product[0];
+        customers = new Customer[0];
+        histories = new History[0];
         customerManager = new CustomerManager();
         productManager = new ProductManager();
-        this.history = new int[0];
+        historyManager = new HistoryManager();
+        
     }
 
     public void run(){
@@ -66,34 +70,11 @@ public class App {
                     break;
                 case 6:
                     System.out.println("6. Покупка продукта");
-                    for (int i = 0; i<products.length;i++){
-                        Product product = products[i];
-                        System.out.println("");
-                        System.out.println(i+1+". \n"+"Название продукта: "+product.getProductName());
-                        System.out.println("Цена продукта: "+product.getPrice()+"€");
-                    }
-                    for (int i = 0; i<customers.length;i++){
-                        Customer customer = customers[i];
-                        System.out.println("");
-                        System.out.println(i+1+". \n"+"Имя покуателя: "+customer.getFirstname());
-                        System.out.println("Фамлиля покуателя: "+customer.getLastname());
-                        System.out.println("Балланс покуателя: "+customer.getCash()+"€");
-                        System.out.println("");
-                        System.out.print("Выберите продукт: ");
-                        int product_a = scanner.nextInt();
-                        System.out.print("Выберите покупателя: ");
-                        int customer_a = scanner.nextInt();
-                        int purchase = customers[customer_a-1].getCash()- products[product_a-1].getPrice();
-                        customers[product_a-1].setCash(purchase);
-                        this.history = Arrays.copyOf(this.history, this.history.length+1);
-                        this.history[this.history.length-1] = products[product_a-1].getPrice();
-                        System.out.println("После покупки: "+customer.getFirstname()+" "+customer.getLastname()+" "+customer.getCash()+"€");
-                    }
+                    addHistory(historyManager.takeOnProduct(products, customers));
                     break;
                 case 7:
                     System.out.println("7. Оборот магазина за все время работы");
-                    int sum = IntStream.of(history).sum();
-                    System.out.println("Оборот магазина = "+sum+"€");
+                    historyManager.printListPurchases(histories);
                     break;
                 case 8:
                     System.out.println("8. Добавить денег покупателю");
@@ -110,6 +91,11 @@ public class App {
             System.out.println("⇕");
         }while(repeat);
         System.out.println("Program Ended...");
+     
     }
-
+    
+    private void addHistory(History histories) {
+        this.histories = Arrays.copyOf(this.histories, this.histories.length+1);
+        this.histories[this.histories.length - 1] = histories;   
+    }
 }
