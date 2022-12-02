@@ -57,7 +57,7 @@ int history[];
             System.out.println(histories[i].getProductPriceHistory()+"€");
             int sum = IntStream.of(history).sum();
             System.out.println("............................");
-            System.out.println("Оборот магазина: " + sum);
+            System.out.println("Оборот магазина: " + sum+"€");
             }
     
         System.out.println();
